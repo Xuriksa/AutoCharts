@@ -12,4 +12,6 @@ $ pip install bs4
 ```
   
 # Run:
-python view.py
+```shell
+$ python view.py
+```
