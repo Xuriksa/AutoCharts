@@ -1,0 +1,6 @@
+__pycache__/
+tests.py
+*.sln
+*.pyproj
+.vs/
+*.json
