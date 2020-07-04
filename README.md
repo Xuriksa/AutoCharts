@@ -9,6 +9,7 @@ A gui program to view charts from billboard.com
 ```shell
 $ pip install requests  
 $ pip install bs4  
+$ pip install youtube_search
 ```
   
 # Run:
