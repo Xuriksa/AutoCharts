@@ -1,20 +1,11 @@
 import sys, json, threading
 import webbrowser
-
 from youtube_search import YoutubeSearch
+
 from chart_rip import get_week
 
-try:
-    import Tkinter as tk
-except ImportError:
-    import tkinter as tk
-
-try:
-    import ttk
-    py3 = False
-except ImportError:
-    import tkinter.ttk as ttk
-    py3 = True
+import tkinter as tk
+import tkinter.ttk as ttk
 
 def on_btnExit():
     sys.exit()
@@ -121,7 +112,7 @@ def play_on_youtube(search):
 
     while not result: # module sometimes returns empty result for some reason
         result = YoutubeSearch(search, max_results=1).to_dict() # get the result of the search
-    webbrowser.open_new_tab(ythome + result[0]['link']) # open in on youtube
+    webbrowser.open_new_tab(ythome + result[0]['url_suffix']) # open in on youtube
 
 def display_list(dict):
    '''

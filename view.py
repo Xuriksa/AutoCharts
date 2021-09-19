@@ -1,18 +1,9 @@
 import sys
+
+import tkinter as tk
+import tkinter.ttk as ttk
+
 from chart_rip import get_week
-
-try:
-    import Tkinter as tk
-except ImportError:
-    import tkinter as tk
-
-try:
-    import ttk
-    py3 = False
-except ImportError:
-    import tkinter.ttk as ttk
-    py3 = True
-
 import view_support
 
 # Execution starts here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -239,13 +230,11 @@ class AutoScroll(object):
         hsb.grid(column=0, row=1, sticky='ew')
         master.grid_columnconfigure(0, weight=1)
         master.grid_rowconfigure(0, weight=1)
+
         # Copy geometry methods of master  (taken from ScrolledText.py)
-        if py3:
-            methods = tk.Pack.__dict__.keys() | tk.Grid.__dict__.keys() \
-                  | tk.Place.__dict__.keys()
-        else:
-            methods = tk.Pack.__dict__.keys() + tk.Grid.__dict__.keys() \
-                  + tk.Place.__dict__.keys()
+        methods = tk.Pack.__dict__.keys() | tk.Grid.__dict__.keys() \
+                | tk.Place.__dict__.keys()
+
         for meth in methods:
             if meth[0] != '_' and meth not in ('config', 'configure'):
                 setattr(self, meth, getattr(master, meth))
