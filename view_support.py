@@ -96,7 +96,7 @@ def order(key, desc):
             backC = gray
 
         fr['f'].configure(background=backC)
-        fr['f'].grid(row=i) # change the song's positoin in the list
+        fr['f'].grid(row=i) # change the song's position in the list
 
         # assign background color to list elements
         children = (fr['f']).winfo_children()
@@ -107,6 +107,7 @@ def order(key, desc):
 
 def play_on_youtube(search):
     'Opens the first youtube video found when putting the search string as a youtube search'
+
     ythome = 'https://www.youtube.com'
     result = []    
 
