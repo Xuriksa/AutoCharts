@@ -8,7 +8,7 @@ A gui program to view charts from billboard.com
 2- Install dependencies: (command line)
 
 ```shell
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
 or 
 
